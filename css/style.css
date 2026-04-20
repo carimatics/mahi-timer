@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  background: linear-gradient(135deg, #fde2e4 0%, #e0f4ff 100%);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d97b7b;
+  font-size: 28px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.character-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.character-button {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.character-button:hover {
+  background: #fef3f3;
+  border-color: #f5b7b7;
+}
+
+.character-button.selected {
+  background: #ffe0e0;
+  border-color: #d97b7b;
+  color: #b55a5a;
+  font-weight: bold;
+}
+
+.character-stage {
+  text-align: center;
+  background: linear-gradient(180deg, #fff9e6 0%, #ffe8d1 100%);
+}
+
+#character-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+#character-message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
+  min-height: 24px;
+}
+
+#timer-display {
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Menlo", "Courier New", monospace;
+  color: #444;
+  padding: 16px 0;
+  letter-spacing: 2px;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timer-buttons button {
+  flex: 1;
+  min-width: 100px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timer-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: #6fb583;
+  color: #ffffff;
+}
+
+.primary:hover:not(:disabled) {
+  background: #5ca070;
+}
+
+.secondary {
+  background: #e88a8a;
+  color: #ffffff;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #d07272;
+}
+
+.tertiary {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.tertiary:hover:not(:disabled) {
+  background: #c8c8c8;
+}
+
+@media (max-width: 480px) {
+  #timer-display {
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}

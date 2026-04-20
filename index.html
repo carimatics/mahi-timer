@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作業応援タイマー</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>作業応援タイマー</h1>
+
+    <section class="panel">
+      <h2>応援キャラクターを選ぶ</h2>
+      <div class="character-buttons">
+        <button type="button" class="character-button" data-character="cat">ねこ</button>
+        <button type="button" class="character-button" data-character="dog">いぬ</button>
+        <button type="button" class="character-button" data-character="bear">くま</button>
+      </div>
+    </section>
+
+    <section class="panel character-stage">
+      <img id="character-image" src="images/cat-1.svg" alt="応援キャラクター">
+      <p id="character-message">ボタンを押して作業を始めよう！</p>
+    </section>
+
+    <section class="panel">
+      <div id="timer-display">00:00:00</div>
+      <div class="timer-buttons">
+        <button type="button" id="start-button" class="primary">計測開始</button>
+        <button type="button" id="stop-button" class="secondary" disabled>計測終了</button>
+        <button type="button" id="reset-button" class="tertiary">リセット</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
